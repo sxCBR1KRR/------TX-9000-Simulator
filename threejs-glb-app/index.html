@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TX-9000 Industrial Simulator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  
+  <div id="training-ui">
+    <div id="progress-bar-container"><div id="progress-bar"></div></div>
+    <div id="step-counter">STEP 1 OF 5</div>
+    <h1 id="step-title">System Overview</h1>
+    
+    <div class="content-block">
+      <div class="label">OBJECTIVE</div>
+      <div id="step-objective" class="text-body"></div>
+    </div>
+
+    <div class="content-block">
+      <div class="label">OPERATING INSTRUCTIONS</div>
+      <ul id="step-instructions" class="text-body"></ul>
+    </div>
+
+    <div class="content-block warning-block" id="step-safety-container">
+      <div class="label" style="color: #ff4444;">⚠️ CRITICAL SAFETY WARNING</div>
+      <div id="step-safety" class="text-body"></div>
+    </div>
+
+    <div class="controls">
+      <button id="btn-prev" class="btn secondary">Back</button>
+      <button id="btn-next" class="btn primary">Next Step</button>
+    </div>
+  </div>
+
+  <button id="btn-toggle-training" class="btn-floating">✖ Close Training Guide</button>
+
+  <canvas id="webgl-canvas"></canvas>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
